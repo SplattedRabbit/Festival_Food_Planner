@@ -28,14 +28,14 @@ body {
     justify-content: center; /* Centers content along the main axis (vertical in this column layout) */
     align-items: center;
 }
+
 .container {
-    max-width: 1200px; /* Increased width to accommodate wider content */
+    max-width: 1200px;
     width: 100%;
     height: auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 15px var(--glow-shadow); /* More prominent shadow */
-
     display: flex;
     flex-direction: column;
 }
@@ -121,20 +121,19 @@ header {
     }
 }
 
-/* CARD STYLING (from mockup) */
 .card {
-    background: #111; /* Slightly darker than card-bg for contrast */
+    background: #111;
     border: 1px solid var(--muted);
     padding: 16px;
     border-radius: 8px;
     margin-bottom: 16px;
-    box-shadow: 0 0 8px rgba(255, 0, 0, 0.1); /* Subtle red glow for cards */
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.1);
 }
 
 .card h3 {
     font-family: 'UnifrakturCook', cursive;
     font-size: 24px;
-    color: var(--highlight); /* Bright orange for card titles */
+    color: var(--highlight);
     margin-bottom: 8px;
 }
 
@@ -143,49 +142,43 @@ header {
     color: var(--text);
 }
 
-/* SNACKS CONTENT (from your original styles, re-themed) */
-/* Also gets the increased max-width */
 .snacks-content {
-    background: var(--card-bg); /* Use theme background */
+    background: var(--card-bg);
     padding: 40px 20px;
     border-radius: 8px;
     text-align: center;
-    color: var(--text); /* Use theme text color */
+    color: var(--text);
     line-height: 1.6;
-    margin: 20px auto; /* Center it */
-    max-width: 1200px; /* Increased width to align with container */
+    margin: 20px auto;
+    max-width: 1200px;
     box-shadow: 0 0 10px var(--glow-shadow);
 }
 
-/* MEAL PLANNER TABLE (from your original styles, re-themed) */
-/* Its parent's increased max-width will give it more room */
 .meal-planner {
-    margin-bottom: 30px;
-    background: var(--card-bg); /* Table background */
+    background: var(--card-bg);
     border-radius: 8px;
-    padding: 10px; /* Padding inside the planner for aesthetics */
+    padding: 10px;
     box-shadow: 0 0 10px var(--glow-shadow);
-    max-width: 100%; /* Ensures it fills its parent (which is now wider) */
+    max-width: 100%;
     margin: 20px auto;
-    overflow-x: auto; /* Kept as a fallback, if table content still overflows */
+    overflow-x: auto;
 }
 
 table {
-    width: 100%; /* Make table try to fill its container */
+    width: 100%;
     border-collapse: collapse;
     margin-bottom: 0;
-    table-layout: fixed; /* Keep this to ensure columns distribute width evenly */
+    table-layout: fixed;
 }
 
 th, td {
-    border: 1px solid var(--muted); /* Muted border color */
+    border: 1px solid var(--muted);
     padding: 8px;
     text-align: center;
-    color: var(--text); /* Default text color for cells */
-
-    /* These were to make cells shrink. With a wider container, they should just spread out */
-    width: 1%; /* This combined with table-layout: fixed makes columns share space */
-    white-space: nowrap; /* Prevent text wrapping in cells by default (for headers) */
+    color: var(--text);
+    width: 12%;
+    white-space: nowrap;
+    min-width: 120px;
 }
 
 .day-header {

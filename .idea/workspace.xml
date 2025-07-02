@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="* Updated Navbars">
+    <list default="true" id="3d8d2444-2351-42c9-a9f5-1ec7d3d83063" name="Changes" comment="* changed base url">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -14,208 +14,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
       <list>
-        <option value="CSS File" />
-        <option value="TypeScript File" />
-        <option value="HTML File" />
+        <option value="main" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2zH7gJ4CBffGS43eEYGOwIFCtxR" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/julian.styles/Festival Food Planner",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\julian.styles\\Festival Food Planner\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\julian.styles\Festival Food Planner" />
-      <recent name="C:\Users\julian.styles\Festival Food Planner\src" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="festivalFoodPlanner" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="festivalFoodPlanner" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26927.53" />
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.26927.53" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="" />
-      <created>1751376257590</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1751376257590</updated>
-      <workItem from="1751376258695" duration="4838000" />
-      <workItem from="1751433969385" duration="2742000" />
-      <workItem from="1751437788999" duration="194000" />
-      <workItem from="1751438371379" duration="311000" />
-      <workItem from="1751438810379" duration="111000" />
-      <workItem from="1751438923202" duration="61000" />
-      <workItem from="1751439013929" duration="16931000" />
-    </task>
-    <task id="LOCAL-00001" summary="* Inital Version for github pages">
-      <option name="closed" value="true" />
-      <created>1751435029424</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1751435029424</updated>
-    </task>
-    <task id="LOCAL-00002" summary="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps">
-      <option name="closed" value="true" />
-      <created>1751442493554</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1751442493554</updated>
-    </task>
-    <task id="LOCAL-00003" summary="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps">
-      <option name="closed" value="true" />
-      <created>1751446078455</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1751446078455</updated>
-    </task>
-    <task id="LOCAL-00004" summary="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps">
-      <option name="closed" value="true" />
-      <created>1751446279325</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1751446279325</updated>
-    </task>
-    <task id="LOCAL-00005" summary="* Changes">
-      <option name="closed" value="true" />
-      <created>1751446932774</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1751446932774</updated>
-    </task>
-    <task id="LOCAL-00006" summary="* Changes">
-      <option name="closed" value="true" />
-      <created>1751449915413</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1751449915413</updated>
-    </task>
-    <task id="LOCAL-00007" summary="* modified import with file extension">
-      <option name="closed" value="true" />
-      <created>1751451084295</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1751451084295</updated>
-    </task>
-    <task id="LOCAL-00008" summary="* added compiled Datasets">
-      <option name="closed" value="true" />
-      <created>1751451202052</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1751451202052</updated>
-    </task>
-    <task id="LOCAL-00009" summary="* moved component location">
-      <option name="closed" value="true" />
-      <created>1751451489065</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1751451489065</updated>
-    </task>
-    <task id="LOCAL-00010" summary="* changed relative paths">
-      <option name="closed" value="true" />
-      <created>1751452369831</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1751452369831</updated>
-    </task>
-    <task id="LOCAL-00011" summary="* changed relative paths">
-      <option name="closed" value="true" />
-      <created>1751460476444</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1751460476444</updated>
-    </task>
-    <task id="LOCAL-00012" summary="* Updated Navbars">
-      <option name="closed" value="true" />
-      <created>1751461832573</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1751461832573</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="* Inital Version for github pages" />
-    <MESSAGE value="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps" />
-    <MESSAGE value="* Changes" />
-    <MESSAGE value="* modified import with file extension" />
-    <MESSAGE value="* added compiled Datasets" />
-    <MESSAGE value="* moved component location" />
-    <MESSAGE value="* changed relative paths" />
-    <MESSAGE value="* Updated Navbars" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Updated Navbars" />
   </component>
 </project>
