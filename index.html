@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Festival Planner</title>
+    <base href="/">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<script type="module" src="js/script.js"></script>
 <div class="container">
-    <div class="title-wrapper">
+    <header>
         <h1>Festival Food Planner</h1>
-    </div>
+    </header>
 
-    <div class="tabs">
-        <button class="tab active" data-tab="meals">Mahlzeiten</button>
-        <button class="tab" data-tab="snacks">Snacks</button>
+    <!-- Enhanced Tab Navigation -->
+    <div class="tabs-container">
+        <div class="tab-nav">
+            <button class="tab-button active" data-tab="meals">Mahlzeiten</button>
+            <button class="tab-button" data-tab="snacks">Snacks</button>
+        </div>
     </div>
 
     <div class="content-area" style="flex-grow: 1; overflow-y: auto;">
-        <div id="meals-section" class="tab-content">
+        <!-- Mahlzeiten Tab -->
+        <div id="meals-section" class="tab-pane active">
             <div class="meal-planner">
                 <div id="meal-planner-container"></div>
             </div>
         </div>
-        <div id="snacks-section" class="tab-content" style="display: none;">
-            <p style="text-align: center; padding: 1em;">Snack-Ansicht kommt bald.</p>
+
+        <!-- Snacks Tab -->
+        <div id="snacks-section" class="tab-pane" style="display: none;">
+            <div class="snacks-content">
+                <p style="text-align: center; padding: 1em;">Snack-Ansicht kommt bald.</p>
+            </div>
         </div>
+
         <div class="buttons">
-            <button onclick="exportToPDF()">Als PDF exportieren</button>
-            <button onclick="clearAll()">Alles löschen</button>
+            <button id="exportPdfButton">Als PDF exportieren</button>
+            <button id="clearAllButton">Alles löschen</button>
         </div>
+
         <div class="shopping-list" id="shoppingList">
             <h2 style="text-align: center;">Einkaufsliste</h2>
             <div id="shoppingItems"></div>
         </div>
     </div>
 </div>
-<script type="module" src="js/script.js"></script>
 </body>
 </html>
