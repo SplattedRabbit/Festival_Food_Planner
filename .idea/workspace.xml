@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="* changed relative paths">
+    <list default="true" id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="* Updated Navbars">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,7 @@
       <workItem from="1751438371379" duration="311000" />
       <workItem from="1751438810379" duration="111000" />
       <workItem from="1751438923202" duration="61000" />
-      <workItem from="1751439013929" duration="14490000" />
+      <workItem from="1751439013929" duration="16931000" />
     </task>
     <task id="LOCAL-00001" summary="* Inital Version for github pages">
       <option name="closed" value="true" />
@@ -195,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751460476444</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="* Updated Navbars">
+      <option name="closed" value="true" />
+      <created>1751461832573</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751461832573</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +215,7 @@
     <MESSAGE value="* added compiled Datasets" />
     <MESSAGE value="* moved component location" />
     <MESSAGE value="* changed relative paths" />
-    <option name="LAST_COMMIT_MESSAGE" value="* changed relative paths" />
+    <MESSAGE value="* Updated Navbars" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Updated Navbars" />
   </component>
 </project>

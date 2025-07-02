@@ -1,117 +1,111 @@
-html, body {
+/* ROOT VARIABLES: Defining the Metal Festival Theme Palette */
+:root {
+    --bg: #0d0d0d;       /* Deep dark background */
+    --text: #f8f8f8;     /* Light text for contrast */
+    --accent: #b30000;   /* Fiery red accent */
+    --muted: #666;       /* Muted grey for borders/secondary text */
+    --card-bg: #1a1a1a;  /* Slightly lighter dark for cards/containers */
+    --highlight: #ff6600; /* Bright orange for main highlights/headers */
+    --subtle-shadow: rgba(255, 0, 0, 0.2); /* Reddish shadow for accents */
+    --glow-shadow: rgba(255, 102, 0, 0.2); /* Orange glow for important elements */
+}
+
+/* GLOBAL RESET & BASE BODY STYLES */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #f5f5f5;
-}
-
-.container {
-    max-width: 90vw;
-    max-height: 90vh;
-    width: 100%;
-    height: 100%;
-
     background: grey url('https://www.summer-breeze.de/wp-content/uploads/2018/08/23/SB2025_main-official_15cm.jpg') no-repeat center top;
-    background-size: cover;
-
+    background-size: cover; /* This makes the image scale to cover the entire element */
+    color: var(--text);
+    font-family: 'Roboto', sans-serif; /* Fallback for general text, as in mockup */
     padding: 20px;
-    box-sizing: border-box;
+    display: flex; /* To center content */
+    min-height: 100vh;
+    justify-content: center; /* Centers content along the main axis (vertical in this column layout) */
+    align-items: center;
+}
+.container {
+    max-width: 1200px; /* Increased width to accommodate wider content */
+    width: 100%;
+    height: auto;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px var(--glow-shadow); /* More prominent shadow */
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
 }
 
-.title-wrapper {
+header {
     text-align: center;
-}
-
-h1 {
-    color: black;
-    text-shadow: 1px 1px 2px white;
-    text-align: center;
+    font-size: 28px;
+    color: var(--highlight);
     margin-bottom: 30px;
-    user-select: none;
-
-    /* Box styling */
-    background-color: rgba(255, 255, 255, 0.50);
-    padding: 10px 20px;
-    border-radius: 0;
-    display: inline-block;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    text-shadow: 0 0 10px var(--accent); /* Fiery glow */
+    padding: 10px 0;
+    width: 100%;
 }
 
 .tabs-container {
+    max-width: 1200px; /* Increased width to align with container */
     width: 100%;
-    max-width: 600px;
-    margin-left: 0;
+    margin: 0 auto 20px auto; /* Center the tabs container within its parent */
 }
 
+/* TAB NAVIGATION (from mockup) */
 .tab-nav {
     display: flex;
     width: 100%;
-    background: rgba(248, 249, 250, 0.9);
-    border-radius: 8px 8px 0 0;
-    border-bottom: 1px solid rgba(233, 236, 239, 0.8);
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--card-bg);
+    border-bottom: 2px solid var(--accent);
+    box-shadow: 0 4px 8px var(--subtle-shadow);
 }
 
+/* TAB BUTTONS (from mockup) */
 .tab-button {
     width: 50%;
-    padding: 16px 24px;
+    padding: 16px;
     background: none;
     border: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: #6c757d;
+    color: var(--text);
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    outline: none;
+    transition: background 0.3s, color 0.3s;
     text-align: center;
-    box-sizing: border-box;
+    outline: none; /* Removes browser default focus outline */
 }
 
 .tab-button:hover {
-    color: #495057;
-    background: rgba(0, 123, 255, 0.05);
+    background: rgba(var(--accent), 0.5); /* Slightly less intense on hover than active */
+    color: #fff;
 }
 
 .tab-button.active {
-    color: #007bff;
-    background: rgba(255, 255, 255, 0.9);
-    font-weight: 600;
+    background: var(--accent); /* Fiery red for active tab */
+    color: #fff;
 }
-
-.tab-button.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #007bff, #0056b3);
-    border-radius: 2px 2px 0 0;
-}
-
+.tab-content,
 .tab-pane {
+    background: var(--card-bg);
+    border: 1px solid var(--muted);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--glow-shadow);
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     display: none;
     animation: fadeIn 0.3s ease-in-out;
+    opacity: 0.9;
 }
 
+.tab-content.active,
 .tab-pane.active {
     display: block;
 }
@@ -127,51 +121,88 @@ h1 {
     }
 }
 
+/* CARD STYLING (from mockup) */
+.card {
+    background: #111; /* Slightly darker than card-bg for contrast */
+    border: 1px solid var(--muted);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.1); /* Subtle red glow for cards */
+}
+
+.card h3 {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 24px;
+    color: var(--highlight); /* Bright orange for card titles */
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 16px;
+    color: var(--text);
+}
+
+/* SNACKS CONTENT (from your original styles, re-themed) */
+/* Also gets the increased max-width */
 .snacks-content {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--card-bg); /* Use theme background */
     padding: 40px 20px;
     border-radius: 8px;
     text-align: center;
-    color: #6c757d;
+    color: var(--text); /* Use theme text color */
     line-height: 1.6;
-    margin: 20px 0;
+    margin: 20px auto; /* Center it */
+    max-width: 1200px; /* Increased width to align with container */
+    box-shadow: 0 0 10px var(--glow-shadow);
 }
 
+/* MEAL PLANNER TABLE (from your original styles, re-themed) */
+/* Its parent's increased max-width will give it more room */
 .meal-planner {
-    overflow-x: auto;
     margin-bottom: 30px;
+    background: var(--card-bg); /* Table background */
+    border-radius: 8px;
+    padding: 10px; /* Padding inside the planner for aesthetics */
+    box-shadow: 0 0 10px var(--glow-shadow);
+    max-width: 100%; /* Ensures it fills its parent (which is now wider) */
+    margin: 20px auto;
+    overflow-x: auto; /* Kept as a fallback, if table content still overflows */
 }
 
 table {
-    width: 100%;
+    width: 100%; /* Make table try to fill its container */
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    table-layout: fixed; /* Keep this to ensure columns distribute width evenly */
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--muted); /* Muted border color */
     padding: 8px;
     text-align: center;
-    min-width: 120px;
-}
+    color: var(--text); /* Default text color for cells */
 
-th {
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
+    /* These were to make cells shrink. With a wider container, they should just spread out */
+    width: 1%; /* This combined with table-layout: fixed makes columns share space */
+    white-space: nowrap; /* Prevent text wrapping in cells by default (for headers) */
 }
 
 .day-header {
-    background-color: #2980b9 !important;
-    min-width: 80px;
+    background-color: darken(var(--accent), 10%) !important;
+    min-width: 80px; /* Keep this min-width for day headers if desired */
 }
 
 .meal-cell {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: var(--bg); /* Dark background for meal cells */
     position: relative;
     vertical-align: top;
+    word-wrap: break-word; /* Allows long words to break and wrap within the cell */
+    white-space: normal; /* Override nowrap from td for meal content */
 }
 
+
+/* DROPDOWN STYLES (from your original, re-themed) */
 .dropdown-container {
     display: flex;
     flex-direction: column;
@@ -181,55 +212,73 @@ th {
 select {
     width: 100%;
     padding: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--muted); /* Muted border */
     border-radius: 4px;
-    background: white;
+    background: var(--bg); /* Dark background for select */
+    color: var(--text); /* Light text color */
+    appearance: none; /* Removes default OS styling */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23f8f8f8%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-6.4H18.6c-5%200-9.3%201.8-13.2%206.4-3.9%204.6-5.8%2010.5-5.8%2017.4s1.9%2012.9%205.8%2017.4l129.5%20129.4c3.9%203.9%209.1%205.8%2014.2%205.8h.4c5.1%200%2010.3-1.9%2014.2-5.8L287%20104.2c3.9-4.6%205.8-10.5%205.8-17.4s-1.9-12.9-5.8-17.4z%22/%3E%3C/svg%3E'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px;
+    padding-right: 30px; /* Make space for the arrow */
 }
 
 select:disabled {
-    background-color: #f0f0f0;
-    color: #999;
+    background-color: #333; /* Darker disabled background */
+    color: var(--muted); /* Muted text color */
     cursor: not-allowed;
 }
 
 .secondary-dropdown {
-    display: none;
+    display: none; /* Controlled by JS */
     margin-top: 2px;
 }
 
+/* BUTTONS (from your original, re-themed) */
+/* Also gets the increased max-width */
 .buttons {
     text-align: center;
-    margin: 20px 0;
+    margin: 20px auto; /* Center buttons */
+    max-width: 1200px; /* Increased width to align with container */
 }
 
 button {
-    background-color: black;
-    opacity: 0.85;
+    background-color: var(--accent); /* Fiery red button */
     color: white;
     border: none;
     padding: 12px 24px;
-    border-radius: 0;
+    border-radius: 0; /* Sharp edges for metal theme */
     cursor: pointer;
     font-size: 16px;
     margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 5px var(--subtle-shadow); /* Subtle shadow for buttons */
 }
 
 button:hover {
-    background-color: lightgray;
-    color: black;
+    background-color: var(--highlight); /* Orange on hover */
+    color: var(--bg); /* Dark text on hover */
 }
 
+/* SHOPPING LIST (from your original, re-themed) */
+/* Also gets the increased max-width */
 .shopping-list {
-    background-color: rgba(236, 240, 241, 0.85);
+    background-color: var(--card-bg);
     padding: 20px;
     border-radius: 6px;
     min-height: 200px;
     flex-shrink: 0;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px var(--glow-shadow);
+    opacity: 0.9;
 }
 
 .shopping-list h2 {
-    color: #2c3e50;
+    color: var(--highlight); /* Highlight color for shopping list title */
     margin-bottom: 15px;
+    font-size: 28px;
 }
 
 .shopping-item {
@@ -237,39 +286,168 @@ button:hover {
     align-items: center;
     margin: 8px 0;
     font-size: 16px;
+    color: var(--text); /* Text color */
 }
 
 .checkbox {
     width: 16px;
     height: 16px;
-    border: 2px solid #333;
+    border: 2px solid var(--accent); /* Accent colored border */
     margin-right: 10px;
     display: inline-block;
+    background-color: var(--bg); /* Dark background for checkbox */
 }
 
+/* MEDIA QUERIES (Adjusted to new theme and structure) */
 @media (max-width: 768px) {
-    .tab-button {
-        padding: 14px 16px;
-        font-size: 14px;
+    body {
+        padding: 10px;
     }
 
     .container {
         padding: 15px;
+        max-width: 100%; /* Allow container to take full width on smaller screens */
+    }
+
+    header {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .tab-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .tab-content,
+    .tab-pane,
+    .snacks-content,
+    .meal-planner,
+    .buttons,
+    .shopping-list {
+        padding: 15px;
+        margin: 15px auto;
+        max-width: 100%; /* Also allow these to take full width on smaller screens */
+    }
+
+    .card {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    th, td {
+        /* Allow cells to shrink much more on mobile */
+        min-width: unset;
+        font-size: 14px;
+    }
+
+    /* Specific adjustment for table cells on very small screens */
+    table {
+        table-layout: auto; /* Allow table to adjust naturally on mobile */
+    }
+    th, td {
+        white-space: normal; /* Allow text to wrap freely on mobile */
+    }
+
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    .shopping-list h2 {
+        font-size: 24px;
     }
 }
 
+/* PRINT STYLES (Adjusted for theme but keeping print-friendly basics) */
 @media print {
-    .buttons, .meal-planner {
-        display: none;
-    }
     body {
         background: white;
+        color: black;
+        padding: 0;
+        display: block;
+        min-height: auto;
     }
     .container {
         box-shadow: none;
+        background: white;
         padding: 0;
         max-width: 100%;
         max-height: 100%;
         height: auto;
+    }
+
+    /* Hide elements not relevant for print */
+    .tab-nav,
+    .buttons,
+    select,
+    .dropdown-container {
+        display: none;
+    }
+
+    header {
+        color: black;
+        text-shadow: none;
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .tab-content,
+    .tab-pane,
+    .snacks-content,
+    .meal-planner,
+    .shopping-list {
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 10px;
+        margin: 10px 0;
+        color: black;
+        display: block !important;
+    }
+    .card {
+        background: white;
+        border: 1px solid #eee;
+        box-shadow: none;
+        color: black;
+    }
+    .card h3,
+    .shopping-list h2 {
+        color: #333;
+        font-family: Arial, sans-serif;
+    }
+    .card p,
+    .shopping-item {
+        color: #555;
+    }
+
+    table {
+        table-layout: auto; /* Allow natural table sizing for print */
+    }
+    th, td {
+        border-color: #ddd;
+        color: black;
+        white-space: normal; /* Allow wrapping for print */
+    }
+    th {
+        background-color: #eee !important;
+        color: black !important;
+    }
+    .meal-cell {
+        background-color: white;
+    }
+    .checkbox {
+        border-color: #999;
     }
 }
