@@ -1,0 +1,14 @@
+{
+  "name": "festival-planner",
+  "version": "1.0.0",
+  "description": "Festival Food Planner Application",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "private": true
+}
