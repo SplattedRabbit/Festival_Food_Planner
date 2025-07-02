@@ -109,13 +109,11 @@ function clearAll(): void {
     shoppingItems.innerHTML = '';  // Clear shopping list content
 }
 
-// Initialize when the DOM is loaded
-// document.addEventListener('DOMContentLoaded', initializeDropdowns);
 window.addEventListener("DOMContentLoaded", async () => {
     const container = document.getElementById("meal-planner-container");
     if (!container) return;
     try {
-        const response = await fetch("src/components/meal-planner.html");
+        const response = await fetch("../src/components/meal-planner.html");
         if (!response.ok) throw new Error("Failed to load meal planner");
         container.innerHTML = await response.text();
 
