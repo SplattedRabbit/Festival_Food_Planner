@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="* added compiled Datasets">
+    <list default="true" id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="* moved component location">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/meal-planner.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/meal-planner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +104,7 @@
       <workItem from="1751438371379" duration="311000" />
       <workItem from="1751438810379" duration="111000" />
       <workItem from="1751438923202" duration="61000" />
-      <workItem from="1751439013929" duration="9851000" />
+      <workItem from="1751439013929" duration="10597000" />
     </task>
     <task id="LOCAL-00001" summary="* Inital Version for github pages">
       <option name="closed" value="true" />
@@ -169,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751451202052</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="* moved component location">
+      <option name="closed" value="true" />
+      <created>1751451489065</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751451489065</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +190,7 @@
     <MESSAGE value="* Changes" />
     <MESSAGE value="* modified import with file extension" />
     <MESSAGE value="* added compiled Datasets" />
-    <option name="LAST_COMMIT_MESSAGE" value="* added compiled Datasets" />
+    <MESSAGE value="* moved component location" />
+    <option name="LAST_COMMIT_MESSAGE" value="* moved component location" />
   </component>
 </project>
