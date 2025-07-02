@@ -1,4 +1,31 @@
 import { mealOptions, secondaryOptions } from "./datasets/datasets.js";
+function initializeTabs() {
+    const tabButtons = document.querySelectorAll('[data-tab]');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const targetTab = this.getAttribute('data-tab');
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.remove('active');
+                pane.style.display = 'none';
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const targetPane = document.getElementById(`${targetTab}-section`);
+            if (targetPane) {
+                targetPane.classList.add('active');
+                targetPane.style.display = 'block';
+                this.classList.add('active');
+            }
+            if (targetTab === 'meals') {
+                document.dispatchEvent(new CustomEvent('mealPlannerActivated'));
+            }
+            else if (targetTab === 'snacks') {
+                document.dispatchEvent(new CustomEvent('snacksPlannerActivated'));
+            }
+        });
+    });
+}
 function initializeDropdowns() {
     const primarySelects = document.querySelectorAll('select:not([data-secondary])');
     const secondarySelects = document.querySelectorAll('select[data-secondary]');
@@ -108,6 +135,13 @@ function attachButtonListeners() {
     }
 }
 window.addEventListener("DOMContentLoaded", async () => {
+    initializeTabs();
+    document.addEventListener('mealPlannerActivated', function () {
+        console.log('Mahlzeiten tab activated - meal planner ready');
+    });
+    document.addEventListener('snacksPlannerActivated', function () {
+        console.log('Snacks tab activated - snacks planner ready');
+    });
     const container = document.getElementById("meal-planner-container");
     if (!container)
         return;

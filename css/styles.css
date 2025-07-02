@@ -10,12 +10,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* full viewport height */
+    min-height: 100vh;
     background: #f5f5f5;
 }
 
 .container {
-    /* max width and height for responsiveness */
     max-width: 90vw;
     max-height: 90vh;
     width: 100%;
@@ -52,6 +51,90 @@ h1 {
     border-radius: 0;
     display: inline-block;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.tabs-container {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 0;
+}
+
+.tab-nav {
+    display: flex;
+    width: 100%;
+    background: rgba(248, 249, 250, 0.9);
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid rgba(233, 236, 239, 0.8);
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button {
+    width: 50%;
+    padding: 16px 24px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.tab-button:hover {
+    color: #495057;
+    background: rgba(0, 123, 255, 0.05);
+}
+
+.tab-button.active {
+    color: #007bff;
+    background: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 2px 2px 0 0;
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.snacks-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 20px 0;
 }
 
 .meal-planner {
@@ -164,35 +247,16 @@ button:hover {
     display: inline-block;
 }
 
-.tabs-container {
-    text-align: right;
-}
+@media (max-width: 768px) {
+    .tab-button {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
 
-.tabs {
-    display: flex;
-    gap: 1em;
-    padding: 0.5em 0;
-    justify-content: flex-start;
+    .container {
+        padding: 15px;
+    }
 }
-
-.tab {
-    padding: 0.5em 1.5em;
-    border: none;
-    background: #ddd;
-    cursor: pointer;
-    border-radius: 0;
-    font-weight: bold;
-}
-
-.tab.active {
-    background: #aaa;
-    color: white;
-}
-
-.tab-content {
-    margin-top: 1em;
-}
-
 
 @media print {
     .buttons, .meal-planner {
