@@ -97,7 +97,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     if (!container)
         return;
     try {
-        const response = await fetch("../src/components/meal-planner.html");
+        const response = await fetch("../components/meal-planner.html");
         if (!response.ok)
             throw new Error("Failed to load meal planner");
         container.innerHTML = await response.text();
