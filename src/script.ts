@@ -110,7 +110,7 @@ function clearAll(): void {
 }
 
 // Initialize when the DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeDropdowns);
+// document.addEventListener('DOMContentLoaded', initializeDropdowns);
 window.addEventListener("DOMContentLoaded", async () => {
     const container = document.getElementById("meal-planner-container");
     if (!container) return;
@@ -120,6 +120,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         container.innerHTML = await response.text();
 
         console.log("Meal planner loaded successfully.");
+        initializeDropdowns();
     } catch (error) {
         console.error("Error loading meal planner:", error);
     }

@@ -92,7 +92,6 @@ function clearAll() {
     const shoppingItems = document.getElementById('shoppingItems');
     shoppingItems.innerHTML = '';
 }
-document.addEventListener('DOMContentLoaded', initializeDropdowns);
 window.addEventListener("DOMContentLoaded", async () => {
     const container = document.getElementById("meal-planner-container");
     if (!container)
@@ -103,6 +102,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             throw new Error("Failed to load meal planner");
         container.innerHTML = await response.text();
         console.log("Meal planner loaded successfully.");
+        initializeDropdowns();
     }
     catch (error) {
         console.error("Error loading meal planner:", error);

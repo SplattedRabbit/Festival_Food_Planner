@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps">
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" />
+    <list default="true" id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="* Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +102,7 @@
       <workItem from="1751438371379" duration="311000" />
       <workItem from="1751438810379" duration="111000" />
       <workItem from="1751438923202" duration="61000" />
-      <workItem from="1751439013929" duration="4853000" />
+      <workItem from="1751439013929" duration="5686000" />
     </task>
     <task id="LOCAL-00001" summary="* Inital Version for github pages">
       <option name="closed" value="true" />
@@ -125,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751446078455</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps">
+      <option name="closed" value="true" />
+      <created>1751446279325</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751446279325</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="* Inital Version for github pages" />
     <MESSAGE value="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps" />
+    <MESSAGE value="* Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Changes" />
   </component>
 </project>
