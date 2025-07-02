@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="* Inital Version for github pages">
-      <change afterPath="$PROJECT_DIR$/.idea/Festival Food Planner.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/script.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    <list default="true" id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps">
+      <change afterPath="$PROJECT_DIR$/src/components/meal-planner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/datasets/datasets.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -61,10 +59,15 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\julian.styles\\Festival Food Planner\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\julian.styles\Festival Food Planner\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="festivalFoodPlanner" />
@@ -99,7 +102,7 @@
       <workItem from="1751438371379" duration="311000" />
       <workItem from="1751438810379" duration="111000" />
       <workItem from="1751438923202" duration="61000" />
-      <workItem from="1751439013929" duration="1138000" />
+      <workItem from="1751439013929" duration="4486000" />
     </task>
     <task id="LOCAL-00001" summary="* Inital Version for github pages">
       <option name="closed" value="true" />
@@ -109,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751435029424</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps">
+      <option name="closed" value="true" />
+      <created>1751442493554</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751442493554</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="* Inital Version for github pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Inital Version for github pages" />
+    <MESSAGE value="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added Typescript-integration&#10;* updaterd Project structure to represent modern style webapps" />
   </component>
 </project>

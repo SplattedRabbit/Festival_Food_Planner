@@ -164,6 +164,32 @@ button:hover {
     display: inline-block;
 }
 
+.tabs {
+    display: flex;
+    gap: 1em;
+    padding: 1em 0;
+    justify-content: center;
+}
+
+.tab {
+    padding: 0.5em 1.5em;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.tab.active {
+    background: #aaa;
+    color: white;
+}
+
+.tab-content {
+    margin-top: 1em;
+}
+
+
 @media print {
     .buttons, .meal-planner {
         display: none;
