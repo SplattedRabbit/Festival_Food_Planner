@@ -1,30 +1,4 @@
-"use strict";
-const mealOptions = [
-    { value: '', text: '-- Auswählen --' },
-    { value: 'infield_food', text: 'Infield Food', exclude: true },
-    { value: 'dosenmahlzeit_gross', text: 'Dosenmahlzeit (groß)' },
-    { value: 'dosenmahlzeit_klein', text: 'Dosenmahlzeit (klein)' },
-    { value: 'instantnudeln_gross', text: 'Instantnudeln (groß)' },
-    { value: 'instantnudeln_klein', text: 'Instantnudeln (klein)' },
-    { value: 'bratkartoffeln', text: 'Bratkartoffeln' },
-    { value: 'chips', text: 'Chips' },
-    { value: 'nuesse', text: 'Nüsse' },
-    { value: 'kekse', text: 'Kekse' },
-    { value: 'proteinbars', text: 'Proteinbars' }
-];
-const secondaryOptions = [
-    { value: '', text: '-- Zusätzliche Auswahl --' },
-    { value: 'infield_food', text: 'Infield Food', exclude: true },
-    { value: 'dosenmahlzeit_gross', text: 'Dosenmahlzeit (groß)' },
-    { value: 'dosenmahlzeit_klein', text: 'Dosenmahlzeit (klein)' },
-    { value: 'instantnudeln_gross', text: 'Instantnudeln (groß)' },
-    { value: 'instantnudeln_klein', text: 'Instantnudeln (klein)' },
-    { value: 'bratkartoffeln', text: 'Bratkartoffeln' },
-    { value: 'chips', text: 'Chips' },
-    { value: 'nuesse', text: 'Nüsse' },
-    { value: 'kekse', text: 'Kekse' },
-    { value: 'proteinbars', text: 'Proteinbars' }
-];
+import { mealOptions, secondaryOptions } from "./datasets/datasets";
 function initializeDropdowns() {
     const primarySelects = document.querySelectorAll('select:not([data-secondary])');
     const secondarySelects = document.querySelectorAll('select[data-secondary]');
@@ -119,3 +93,18 @@ function clearAll() {
     shoppingItems.innerHTML = '';
 }
 document.addEventListener('DOMContentLoaded', initializeDropdowns);
+window.addEventListener("DOMContentLoaded", async () => {
+    const container = document.getElementById("meal-planner-container");
+    if (!container)
+        return;
+    try {
+        const response = await fetch("src/components/meal-planner.html");
+        if (!response.ok)
+            throw new Error("Failed to load meal planner");
+        container.innerHTML = await response.text();
+        console.log("Meal planner loaded successfully.");
+    }
+    catch (error) {
+        console.error("Error loading meal planner:", error);
+    }
+});
