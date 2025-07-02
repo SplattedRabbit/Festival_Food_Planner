@@ -92,6 +92,21 @@ function clearAll() {
     const shoppingItems = document.getElementById('shoppingItems');
     shoppingItems.innerHTML = '';
 }
+function attachButtonListeners() {
+    const exportButton = document.getElementById('exportPdfButton');
+    if (exportButton) {
+        exportButton.addEventListener('click', exportToPDF);
+        console.log("Export PDF button listener attached.");
+    }
+    else {
+        console.warn("Export PDF button not found. Make sure its ID is 'exportPdfButton'.");
+    }
+    const clearButton = document.getElementById('clearAllButton');
+    if (clearButton) {
+        clearButton.addEventListener('click', clearAll);
+        console.log("Clear All button listener attached.");
+    }
+}
 window.addEventListener("DOMContentLoaded", async () => {
     const container = document.getElementById("meal-planner-container");
     if (!container)
@@ -103,6 +118,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         container.innerHTML = await response.text();
         console.log("Meal planner loaded successfully.");
         initializeDropdowns();
+        attachButtonListeners();
     }
     catch (error) {
         console.error("Error loading meal planner:", error);

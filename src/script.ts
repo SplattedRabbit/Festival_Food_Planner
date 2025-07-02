@@ -109,6 +109,23 @@ function clearAll(): void {
     shoppingItems.innerHTML = '';  // Clear shopping list content
 }
 
+function attachButtonListeners() {
+    const exportButton = document.getElementById('exportPdfButton');
+    if (exportButton) {
+        exportButton.addEventListener('click', exportToPDF);
+        console.log("Export PDF button listener attached.");
+    } else {
+        console.warn("Export PDF button not found. Make sure its ID is 'exportPdfButton'.");
+    }
+
+    // You might also want to attach the clearAll button here if it's dynamic
+    const clearButton = document.getElementById('clearAllButton'); // Example for clear all button
+    if (clearButton) {
+        clearButton.addEventListener('click', clearAll);
+        console.log("Clear All button listener attached.");
+    }
+}
+
 window.addEventListener("DOMContentLoaded", async () => {
     const container = document.getElementById("meal-planner-container");
     if (!container) return;
@@ -119,6 +136,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         console.log("Meal planner loaded successfully.");
         initializeDropdowns();
+        attachButtonListeners();
     } catch (error) {
         console.error("Error loading meal planner:", error);
     }
