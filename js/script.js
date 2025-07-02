@@ -1,4 +1,4 @@
-import { mealOptions, secondaryOptions } from "./datasets/datasets";
+import { mealOptions, secondaryOptions } from "./datasets/datasets.js";
 function initializeDropdowns() {
     const primarySelects = document.querySelectorAll('select:not([data-secondary])');
     const secondarySelects = document.querySelectorAll('select[data-secondary]');

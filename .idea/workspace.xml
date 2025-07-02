@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a68563f1-ec05-465a-8783-9cf223f4e78e" name="Changes" comment="* Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.ts" afterDir="false" />
     </list>
@@ -103,7 +102,7 @@
       <workItem from="1751438371379" duration="311000" />
       <workItem from="1751438810379" duration="111000" />
       <workItem from="1751438923202" duration="61000" />
-      <workItem from="1751439013929" duration="8618000" />
+      <workItem from="1751439013929" duration="9439000" />
     </task>
     <task id="LOCAL-00001" summary="* Inital Version for github pages">
       <option name="closed" value="true" />
@@ -145,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751446932774</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="* Changes">
+      <option name="closed" value="true" />
+      <created>1751449915413</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751449915413</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
