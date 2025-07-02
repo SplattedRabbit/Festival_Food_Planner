@@ -1,6 +1,46 @@
 import {mealOptions, secondaryOptions} from "./datasets/datasets.js";
 import {MealOption} from "./datasets/datasets.js"
 
+// ===============================
+// TAB FUNCTIONALITY
+// ===============================
+function initializeTabs(): void {
+    const tabButtons = document.querySelectorAll<HTMLButtonElement>('[data-tab]');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+
+            // Remove active from all tabs and buttons
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.remove('active');
+                (pane as HTMLElement).style.display = 'none';
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Activate target tab and button
+            const targetPane = document.getElementById(`${targetTab}-section`);
+            if (targetPane) {
+                targetPane.classList.add('active');
+                (targetPane as HTMLElement).style.display = 'block';
+                this.classList.add('active');
+            }
+
+            // Trigger events for meal planner components
+            if (targetTab === 'meals') {
+                document.dispatchEvent(new CustomEvent('mealPlannerActivated'));
+            } else if (targetTab === 'snacks') {
+                document.dispatchEvent(new CustomEvent('snacksPlannerActivated'));
+            }
+        });
+    });
+}
+
+// ===============================
+// EXISTING MEAL PLANNER FUNCTIONALITY
+// ===============================
 function initializeDropdowns(): void {
     const primarySelects = document.querySelectorAll<HTMLSelectElement>('select:not([data-secondary])');
     const secondarySelects = document.querySelectorAll<HTMLSelectElement>('select[data-secondary]');
@@ -99,7 +139,6 @@ function clearAll(): void {
         select.selectedIndex = 0;
     });
 
-
     const secondarySelects = document.querySelectorAll<HTMLSelectElement>('.secondary-dropdown');
     secondarySelects.forEach((select: HTMLSelectElement) => {
         select.style.display = 'none';
@@ -109,19 +148,51 @@ function clearAll(): void {
     shoppingItems.innerHTML = '';  // Clear shopping list content
 }
 
+function attachButtonListeners() {
+    const exportButton = document.getElementById('exportPdfButton');
+    if (exportButton) {
+        exportButton.addEventListener('click', exportToPDF);
+        console.log("Export PDF button listener attached.");
+    } else {
+        console.warn("Export PDF button not found. Make sure its ID is 'exportPdfButton'.");
+    }
+
+    const clearButton = document.getElementById('clearAllButton');
+    if (clearButton) {
+        clearButton.addEventListener('click', clearAll);
+        console.log("Clear All button listener attached.");
+    }
+}
+
+// ===============================
+// INITIALIZATION
+// ===============================
 window.addEventListener("DOMContentLoaded", async () => {
+    // Initialize tab functionality
+    initializeTabs();
+
+    // Event listeners for tab activation
+    document.addEventListener('mealPlannerActivated', function() {
+        console.log('Mahlzeiten tab activated - meal planner ready');
+    });
+
+    document.addEventListener('snacksPlannerActivated', function() {
+        console.log('Snacks tab activated - snacks planner ready');
+    });
+
+    // Load meal planner component
     const container = document.getElementById("meal-planner-container");
     if (!container) return;
+
     try {
-        const response = await fetch("../components/meal-planner.html");
+        const response = await fetch("components/meal-planner.html");
         if (!response.ok) throw new Error("Failed to load meal planner");
         container.innerHTML = await response.text();
 
         console.log("Meal planner loaded successfully.");
         initializeDropdowns();
+        attachButtonListeners();
     } catch (error) {
         console.error("Error loading meal planner:", error);
     }
 });
-
-
